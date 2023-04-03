@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    padding: 0 4vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > h1 {
+    font: 900 3.5vmax "Better Grade";
+    letter-spacing: 5px;
+    transition: 0.25s;
+}
+
+nav > h1:hover {
+    cursor: pointer;
+    transform: translate(1px, 1px);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+nav > h3 {
+    cursor: pointer;
+    font: 700 1.5vmax "montserrat";
+}
+
+.page1 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2vmax;
+}
+
+.page1 > h1 {
+    text-align: center;
+    font: 900 7vmax "montserrat";
+    letter-spacing: -2px;
+    line-height: 7vmax;
+}
+
+.p1-footer {
+    font: 400 1.2vmax "serif";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p1-footer > hr {
+    border: none;
+    width: 2px;
+    height: 3vmax;
+    background-color: black;
+}
