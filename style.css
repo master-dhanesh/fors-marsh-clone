@@ -10,7 +10,18 @@ body {
     min-height: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 0.5vmax;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ffa21b;
+}
+
 nav {
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 100;
     height: 10vh;
     width: 100%;
     padding: 0 4vmax;
@@ -36,9 +47,44 @@ nav > h3 {
     font: 700 1.5vmax "montserrat";
 }
 
-.page1 {
+.semi-circle {
+    position: absolute;
+    width: 30vmax;
+    height: 15vmax;
+    background-color: #ffa21b;
+    border-radius: 15vmax 15vmax 0 0;
+    bottom: 20%;
+    left: 6%;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.quarter {
+    position: absolute;
+    width: 15vmax;
+    height: 15vmax;
+    border-radius: 0 0 300px 0px;
+    z-index: -1;
+}
+
+.quarter-circle1 {
+    right: 10%;
+    top: 10%;
+    background-color: #e9c5d3;
+    transform: rotate(-90deg);
+}
+
+.quarter-circle2 {
+    right: 20%;
+    bottom: 2%;
+    background-color: #47a0e9;
+    transform: rotate(30deg) scale(0.8);
+}
+
+.page {
+    position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,7 +92,7 @@ nav > h3 {
     padding-bottom: 2vmax;
 }
 
-.page1 > h1 {
+.page h1 {
     text-align: center;
     font: 900 7vmax "montserrat";
     letter-spacing: -2px;
@@ -60,9 +106,80 @@ nav > h3 {
     align-items: center;
 }
 
-.p1-footer > hr {
+.load-line {
+    width: 5vmax;
+    height: 3vmax;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.p1-footer hr {
     border: none;
     width: 2px;
     height: 3vmax;
     background-color: black;
+    animation: load 2s ease 1 both;
+}
+
+@keyframes load {
+    0% {
+        height: 3vmax;
+    }
+    50% {
+        height: 0.5vmax;
+    }
+    100% {
+        height: 3vmax;
+    }
+}
+
+.p2-content {
+    text-align: center;
+}
+
+.page2 h1 {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    font: 900 4vmax Serif;
+    /* letter-spacing: -2px; */
+    line-height: 3.5vmax;
+}
+
+.p2-content button {
+    border-radius: 5vmax;
+    padding: 1.5vmax 3vmax;
+    font: 200 1.5vmax Serif;
+    margin-top: 3vmax;
+    background-color: #ffa527;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.p2-content button:hover {
+    color: white;
+}
+
+.p2-content span {
+    position: relative;
+    z-index: 1000;
+}
+
+.p2-content button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    transition: 1s;
+    transform: translateY(100px);
+}
+
+.p2-content button:hover::after {
+    transform: translateY(0) scale(3);
 }
