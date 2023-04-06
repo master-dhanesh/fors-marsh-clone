@@ -183,3 +183,105 @@ nav > h3 {
 .p2-content button:hover::after {
     transform: translateY(0) scale(3);
 }
+
+.page3 {
+    width: 100%;
+    display: flex;
+    padding-left: 8%;
+    margin: 10% 0;
+}
+
+.p3-left {
+    width: 50%;
+    padding-right: 2vmax;
+}
+
+.p3l-subtitle {
+    color: gray;
+    font: 400 1vmax "montserrat";
+}
+
+.p3-left h1 {
+    font: 900 3.5vmax "montserrat";
+    line-height: 4vmax;
+    margin: 2vmax 0;
+}
+
+.p3l-image {
+    height: 60vh;
+    width: 100%;
+    background-image: url(https://www.forsmarsh.com/wp-content/uploads/2023/02/casestudy-ninds-preview.jpg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 0 solid #ffa21b;
+    border-right: 0 solid #ffa21b;
+    transition: 0.5s all;
+}
+
+.p3l-image:hover {
+    border-top: 1vmax solid #ffa21b;
+    border-right: 1vmax solid #ffa21b;
+}
+
+.p3-left h3,
+.p3-right h3 {
+    margin: 2vmax 0;
+    font: 500 2vmax "serif";
+    line-height: 2vmax;
+}
+
+.p3l-date {
+    color: gray;
+    font: 400 1.5vmax "montserrat";
+}
+
+.p3-right {
+    width: 50%;
+}
+
+.p3r-subtitle {
+    width: 75%;
+    padding-left: 10%;
+    margin-top: 3vmax;
+    font: 400 1.2vmax "montserrat";
+    line-height: 2vmax;
+    margin-bottom: 1vmax;
+}
+
+.p3r-btn {
+    margin-left: 10%;
+    margin-bottom: 2vmax;
+    font: 900 1vmax "montserrat";
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.p3r-btn:before {
+    content: "";
+    position: absolute;
+    left: -15%;
+    height: 100%;
+    width: 10%;
+    background-color: #ffa21b;
+    z-index: -1;
+    transition: 0.25s all;
+}
+
+.p3r-btn:hover::before {
+    width: 130%;
+}
+
+.p3r-image {
+    background-image: url(https://www.forsmarsh.com/wp-content/uploads/2023/02/casestudy-arng-preview.jpg.webp);
+    border: none;
+    border-bottom: 0 solid #ffa21b;
+    border-left: 0 solid #ffa21b;
+}
+
+.p3r-image:hover {
+    border: none;
+    border-bottom: 1vmax solid #ffa21b;
+    border-left: 1vmax solid #ffa21b;
+}
